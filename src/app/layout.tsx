@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "MV Foundation",
-  description: "Moonee Valley Foundation website clone baseline.",
+  description: "Moonee Valley Foundation supports young adults across Melbourne's north-west.",
 };
 
 export default function RootLayout({

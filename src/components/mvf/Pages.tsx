@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { AlumniVoices } from "@/components/mvf/AlumniVoices";
 import { AssetImage } from "@/components/mvf/AssetImage";
+import { DonationForm } from "@/components/mvf/DonationForm";
 import { InfoSections } from "@/components/mvf/InfoSections";
 import { NewsCard } from "@/components/mvf/NewsCard";
 import { PageBanner } from "@/components/mvf/PageBanner";
 import { SupportCta } from "@/components/mvf/SupportCta";
-import { ContactFormVisual, DonationPlaceholder } from "@/components/mvf/VisualForms";
+import { ContactFormVisual } from "@/components/mvf/VisualForms";
 import {
   aboutSections,
   alumniSections,
@@ -33,11 +34,11 @@ export const pageTitles: Record<PageSlug, string> = {
   news: "Latest News",
 };
 
-export function MainPage({ slug }: { slug: PageSlug }) {
+export function MainPage({ slug, donationError }: { slug: PageSlug; donationError?: string }) {
   if (slug === "news") return <NewsPage />;
   if (slug === "past-winners") return <PastWinnersPage />;
   if (slug === "contact") return <ContactPage />;
-  if (slug === "support-us") return <SupportPage />;
+  if (slug === "support-us") return <SupportPage donationError={donationError} />;
   if (slug === "apply") return <ApplyPage />;
   if (slug === "grants") return <GrantsPage />;
   if (slug === "about") return <AboutPage />;
@@ -193,7 +194,7 @@ function ContactPage() {
   );
 }
 
-function SupportPage() {
+function SupportPage({ donationError }: { donationError?: string }) {
   return (
     <main>
       <PageBanner title="Support Us" />
@@ -207,7 +208,7 @@ function SupportPage() {
               people in our community.
             </p>
             <div className="mt-12">
-              <DonationPlaceholder />
+              <DonationForm error={donationError} />
             </div>
           </div>
         </div>

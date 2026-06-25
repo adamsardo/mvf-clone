@@ -33,7 +33,7 @@ export function HomePage() {
           <h2 className="text-3xl font-bold md:text-4xl">Our Mission</h2>
           <p className="mt-3 text-sm font-bold">Our Goal, Vision &amp; Commitment</p>
         </Link>
-        <Link href="/support-us" className="bg-mvf-blue px-6 py-10 transition-opacity hover:opacity-95">
+        <Link href="/support-us#donate" className="bg-mvf-blue px-6 py-10 transition-opacity hover:opacity-95">
           <h2 className="text-3xl font-bold md:text-4xl">Get Involved</h2>
           <p className="mt-3 text-sm font-bold">Volunteer, Participate, or Donate</p>
         </Link>
@@ -76,7 +76,7 @@ export function HomePage() {
               <br />
               Young Minds
             </p>
-            <ButtonLink href="/support-us" className="mt-8">
+            <ButtonLink href="/support-us#donate" className="mt-8">
               Donate Now
             </ButtonLink>
           </div>

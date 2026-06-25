@@ -16,13 +16,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: `${pageTitles[slug]} | MV Foundation`,
-    description: "Moonee Valley Foundation website clone baseline.",
+    description:
+      slug === "support-us"
+        ? "Donate securely to support young people through the Moonee Valley Foundation."
+        : "Moonee Valley Foundation supports young adults across Melbourne's north-west.",
   };
 }
 
-export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+function getSearchParam(value: string | string[] | undefined) {
+  if (Array.isArray(value)) return value[0];
+  return value;
+}
+
+export default async function Page({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const { slug } = await params;
   if (!isPageSlug(slug)) notFound();
 
-  return <MainPage slug={slug} />;
+  const resolvedSearchParams = await searchParams;
+
+  return <MainPage slug={slug} donationError={getSearchParam(resolvedSearchParams.donationError)} />;
 }

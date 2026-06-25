@@ -36,7 +36,7 @@ export function SiteHeader() {
           })}
         </nav>
         <Link
-          href="/support-us"
+          href="/support-us#donate"
           className="ml-auto hidden h-full items-center bg-mvf-purple px-8 text-xl font-medium transition-colors hover:bg-mvf-purple-dark lg:flex"
         >
           Donate
@@ -65,7 +65,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              href="/support-us"
+              href="/support-us#donate"
               onClick={() => setOpen(false)}
               className="bg-mvf-purple px-6 py-4 text-sm font-bold text-white"
             >
