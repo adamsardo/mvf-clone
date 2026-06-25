@@ -1,15 +1,19 @@
 import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import type { NextConfig } from "next";
 
 const root = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: "standalone",
+  images: {
+    unoptimized: true,
+  },
   turbopack: {
     root,
   },
 };
 
 export default nextConfig;
+
+initOpenNextCloudflareForDev();

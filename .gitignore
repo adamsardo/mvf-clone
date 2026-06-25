@@ -5,12 +5,16 @@ node_modules/
 
 # Build
 .next/
+.open-next/
 out/
 build/
 dist/
+.wrangler/
 
 # Environment
 .env
+.dev.vars
+.dev.vars.local
 .env.local
 .env.development.local
 .env.test.local

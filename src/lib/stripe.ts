@@ -13,6 +13,7 @@ export function getStripeClient() {
 
   stripeClient ??= new Stripe(secretKey, {
     apiVersion: stripeApiVersion,
+    httpClient: Stripe.createFetchHttpClient(),
     appInfo: {
       name: "Moonee Valley Foundation donation flow",
     },
