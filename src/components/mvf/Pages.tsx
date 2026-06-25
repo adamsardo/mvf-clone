@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AlumniVoices } from "@/components/mvf/AlumniVoices";
 import { AssetImage } from "@/components/mvf/AssetImage";
 import { DonationForm } from "@/components/mvf/DonationForm";
+import { ImagePlaceholder } from "@/components/mvf/ImagePlaceholder";
 import { InfoSections } from "@/components/mvf/InfoSections";
 import { NewsCard } from "@/components/mvf/NewsCard";
 import { PageBanner } from "@/components/mvf/PageBanner";
@@ -200,7 +201,7 @@ function SupportPage({ donationError }: { donationError?: string }) {
       <PageBanner title="Support Us" />
       <section className="bg-mvf-soft px-5 py-12 sm:px-8 sm:py-20">
         <div className="mx-auto grid max-w-[1050px] gap-12 lg:grid-cols-[minmax(320px,.9fr)_minmax(0,1.1fr)]">
-          <AssetImage asset={images.support} className="min-h-[360px]" sizes="(min-width: 1000px) 45vw, 90vw" />
+          <ImagePlaceholder className="min-h-[360px] self-start" />
           <div className="min-w-0">
             <h2 className="text-4xl font-bold text-mvf-grey">Get Involved</h2>
             <p className="mt-8 text-lg leading-8 text-mvf-ink">

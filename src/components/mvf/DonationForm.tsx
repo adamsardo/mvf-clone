@@ -104,7 +104,7 @@ export function DonationForm({ error }: DonationFormProps) {
             <legend className="text-sm font-bold uppercase text-mvf-grey">Frequency</legend>
             <div className="grid gap-3 md:grid-cols-2">
               {donationFrequencies.map((frequency) => (
-                <label key={frequency.value} className="cursor-pointer">
+                <label key={frequency.value} className="grid cursor-pointer">
                   <input
                     type="radio"
                     name="frequency"
@@ -116,6 +116,7 @@ export function DonationForm({ error }: DonationFormProps) {
                   <span
                     className={cn(
                       "block border border-mvf-border bg-mvf-soft p-4 transition-colors",
+                      "h-full min-h-[108px]",
                       selectedFrequency === frequency.value && "border-mvf-purple bg-white",
                     )}
                   >
