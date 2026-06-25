@@ -198,10 +198,10 @@ function SupportPage({ donationError }: { donationError?: string }) {
   return (
     <main>
       <PageBanner title="Support Us" />
-      <section className="bg-mvf-soft px-8 py-20">
-        <div className="mx-auto grid max-w-[1050px] gap-12 lg:grid-cols-[.9fr_1.1fr]">
+      <section className="bg-mvf-soft px-5 py-12 sm:px-8 sm:py-20">
+        <div className="mx-auto grid max-w-[1050px] gap-12 lg:grid-cols-[minmax(320px,.9fr)_minmax(0,1.1fr)]">
           <AssetImage asset={images.support} className="min-h-[360px]" sizes="(min-width: 1000px) 45vw, 90vw" />
-          <div>
+          <div className="min-w-0">
             <h2 className="text-4xl font-bold text-mvf-grey">Get Involved</h2>
             <p className="mt-8 text-lg leading-8 text-mvf-ink">
               See the below for details to get involved by donating now. Help us support the talented and resilient young
